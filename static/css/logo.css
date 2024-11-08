@@ -1,0 +1,80 @@
+
+        /* 页面整体样式 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #007bff, #0851a8);
+        }
+
+        /* 登录容器样式 */
+        .login-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        /* 标题样式 */
+        .login-container h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* 图片样式 */
+        .login-container img {
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 2px solid #ee9900;
+        }
+
+        /* 表单样式 */
+        form label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        /* 登录按钮样式 */
+        form button {
+            font-size: 18px;
+            color: #fff;
+            background-color: #ee9900;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #cc7a00;
+        }
+
+        /* 响应消息样式 */
+        .message {
+            color: #ff3333;
+            font-size: 14px;
+            margin-top: 10px;
+        }

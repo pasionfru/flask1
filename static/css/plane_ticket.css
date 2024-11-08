@@ -1,0 +1,234 @@
+.jipiao_selected{
+    margin-left: 65px;
+    border-bottom: 2px solid #fffdef;
+}
+
+
+.main .selected{
+    border-bottom: 0;
+}
+.pt_container{
+    width: 100%;
+    height: 340px;
+    position: relative;
+
+}
+.pt.bg{
+    position: absolute;
+    /*width: 100%;*/
+    /*height: 336px;*/
+     top: 0; /* 设置背景图的顶部位置 */
+    left: 0; /* 设置背景图的左侧位置 */
+    width: 100%; /* 保持宽度 */
+    height: 336px; /* 设定高度 */
+
+
+}
+/*.wrap_plane{*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 250px;*/
+/*}*/
+.plane_search_box{
+    /*width: 657px;*/
+    /*height: 200px;*/
+    /*border: 2px solid #1b1b1b;*/
+    /*padding: 30px;*/
+    position: absolute; /* 使搜索框绝对定位 */
+    top: 10px; /* 调整到你想要的具体位置 */
+    left: 45%; /* 水平居中 */
+    transform: translateX(-50%); /* 修正居中 */
+    width: 657px;
+    height: 258px;
+    border: 2px solid rgba(0,127,246, 0.6);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.plane_search_box h2{
+    position: absolute;
+    top:20px;
+    left: 10px;
+    float: left;
+    font-weight:bolder;
+}
+
+
+.plane_search_box ul li{
+    padding-top: 30px;
+    margin-right: 18px;
+    float: left;
+}
+.plane_search_box .gnjp_selected{
+    border-bottom: 2px solid rgba(249,205,173,1);
+}
+.plane_search{
+    width: 680px;
+    height: 230px;
+    background: rgba(249,205,173,0.1);
+    position: absolute;
+    top:80px;
+    border-top: 2px solid rgba(249,205,173,0.4);
+    left: 20px;
+}
+
+.plane_search label, .plane_search button {
+    display: inline-block;
+    vertical-align: middle; /* 垂直居中对齐 */
+    font-size: 16px; /* 重置字体大小 */
+    margin-right: 10px; /* 为元素之间添加一些间距 */
+}
+.plane_search .radio_tour{
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.plane_search .tick_search{
+    width: 132px;
+    height: 40px;
+    background: #FF5622;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 5px; /* 调整字符间距 */
+    margin-top: 155px;
+    margin-left: 200px;
+}
+
+.input-box{
+    position: absolute;
+    float: left;
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 10px;
+}
+
+.input-box button{
+    background: #fff;
+    border:1px solid #e0e0e0;
+    width: 27px;
+    height: 35px;
+    margin-right: 200px;
+}
+
+.input-to-box{
+    position: absolute;
+    float: left;
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 10px;
+}
+
+.input-to-box button{
+    background: #fff;
+    border:1px solid #e0e0e0;
+    width: 27px;
+    height: 35px;
+    margin-right: 200px;
+}
+
+.search-position-box{
+    width: 214px;
+    height: 31px;
+}
+
+.city-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+.city-dropdown ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+.city-dropdown ul li {
+            padding: 8px;
+            cursor: pointer;
+        }
+.city-dropdown ul li:hover {
+            background-color: #f0f0f0;
+        }
+
+.input-star-time{
+    position: absolute;
+    float: left;
+    margin-top: 50px;
+    margin-left: 230px;
+    left: 72px;
+}
+
+.input-end-time{
+    position: absolute;
+    float: left;
+    margin-top: 100px;
+    margin-left: 230px;
+    left: 72px;
+}
+
+.input-star-time button{
+    background: #fff;
+    border:1px solid #e0e0e0;
+    width: 27px;
+    height: 35px;
+    margin-right: 80px;
+}
+.kefudianhua{
+    display: block;
+    margin-top: 160px;
+    font-size: 14px;
+    margin-left: 10px;
+    float: left;
+    position: absolute;
+    color: #9C1A1C;
+}
+
+.kefudianhua i{
+    color: #9C1A1C;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.haiwaiyonghu{
+    display: block;
+    margin-top: 180px;
+    font-size: 14px;
+    margin-left: 10px;
+    float: left;
+    position: absolute;
+    color: #333333;
+    padding-top: 5px;
+}
+
+/*页脚部分开始*/
+.footer{
+    width: 100%;
+    float: left;
+}
+.footer-link ul{
+    display: flex;        /* 设置为Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    list-style: none;     /* 移除默认的列表符号 */
+    padding: 0;           /* 移除默认的内边距 */
+}
+
+.footer-link li{
+    /*display: block;*/
+    width: 104px;
+    height: 40px;
+    float: left;
+}
+
+.copyright{
+    font-size: 12px;
+    color: #4f4f4f;
+}
+
+/*页脚部分结束*/

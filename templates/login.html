@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小鼻嘎登录页面</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/logo.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>登录页面</h2>
+        <img src="../static/image/logo.png" width="100px" height="100px" alt="Logo">
+        <form action="/login" method="POST">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">登录</button>
+
+            <!-- 输出响应信息 -->
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class="message">
+                  {% for message in messages %}
+                    <p>{{ message }}</p>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+</body>
+</html>

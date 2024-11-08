@@ -1,0 +1,78 @@
+.gty_selected{
+    border-bottom: 2px solid #fffdef;
+}
+.jipiao_selected{
+    border-bottom: 0;
+}
+
+.hot-tour{
+
+     max-width: 1300px;
+     margin: 20px auto;
+     padding: 10px;
+     position: relative;
+}
+
+.hot-tour h2{
+    border-left: 4px solid rgba(0,127,246,1);
+    margin-left: 150px;
+    margin-top: 10px;
+    float: left;
+}
+.hot-tour .jqhh{
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #4f4f4f;
+}
+
+.tour-list {
+    display: flex;
+    flex-wrap: wrap;
+    /*top: 100px;*/
+    gap: 20px;
+    margin-top: 70px;
+    margin-left: 120px;
+}
+.tour-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px);
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+.tour-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.tour-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.tour-item-content {
+    padding: 15px;
+}
+.tour-item-content h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #1890ff;
+}
+.tour-item-content p {
+    margin: 10px 0;
+}
+.tour-item-content .price {
+    color: #e64a19;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.tours-rating{
+    color: #fffdef;
+    background-color: rgba(0,127,246,1);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}

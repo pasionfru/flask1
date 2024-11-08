@@ -1,0 +1,35 @@
+table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+table, th, td {
+            border: 1px solid #ddd;
+        }
+th, td {
+            padding: 12px;
+            text-align: center;
+        }
+th {
+            background-color: rgba(0,127,246, 0.6);
+            color: #fffdef;
+        }
+
+button {
+    background: rgba(255,160,160,1);
+    color: white;
+    border:1px solid #e0e0e0;
+    width: 60px;
+    height: 35px;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+.search-plane-box{
+    border: 1px solid rgba(249,205,173,1);
+    padding-top: 10px;
+
+}
+.search-table{
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

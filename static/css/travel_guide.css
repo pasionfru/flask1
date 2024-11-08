@@ -1,0 +1,149 @@
+/*.jiudian_selected{*/
+/*    border-bottom: 2px solid #fffdef;*/
+/*}*/
+.gl_selected{
+    border-bottom: 2px solid #fffdef;
+}
+.jiudian_selected{
+    border-bottom: 0;
+}
+
+.travel-container{
+    width: 100%;
+    height: auto;
+}
+.travel-container .nav-box{
+    width: 1200px;
+    margin: auto;
+    display: block;
+    height: 70px;
+    border-bottom: 1px dashed #333333;
+}
+
+.travel-nav{
+    display: flex; /* 使用flex布局 */
+    align-items: center;
+    /*justify-content: center;*/
+    height: 100%;
+}
+
+.travel-container .nav-box .travel-nav li{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 58px 13px;
+    text-align: left;
+    padding-left: 22px;
+    font-size: 20px;
+}
+
+.travel_guide_title{
+    width: 1200px;
+    margin: auto;
+     display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中flex项 */
+    height: 70px;
+    border-bottom: 1px dashed #333333;
+    transition: top 0.5s;
+}
+.travel_guide_title .guide_title{
+    display:flex;
+    padding: 10px;
+    text-align: left;
+    margin-right: 980px;
+}
+.travel_guide_title .btn-add{
+    height: 40px;
+    line-height: 40px;
+    background: rgba(0,127,246,1);
+    text-align: center;
+    padding: 0 20px;
+    float: right;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    color: #fffdef;
+    font-weight: bold;
+
+}
+
+.travel-guide-list{
+    width: 1200px;
+    margin: auto;
+     /*display: flex; !* 使用flex布局 *!*/
+    align-items: center; /* 垂直居中flex项 */
+    height: auto;
+    border-bottom: 1px dashed #333333;
+}
+.travel-guide-item{
+    width: 1200px;
+    height: auto;
+    display: block;
+    border-bottom: 1px dashed #333333;
+}
+.travel-guide-item h3{
+    padding: 10px;
+    font-size: 20px;
+    color: rgba(51, 51, 51, 1);
+    font-weight: 400;
+    overflow: hidden;
+    display: flex;
+}
+.travel-guide-item h3:hover{
+    color: rgba(0, 127, 246, 1);
+}
+.travel-guide-item p{
+    color: #333333 !important;
+    margin: 0;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    vertical-align: baseline;
+    background: transparent;
+    display: block; /* 更改为block，因为flex布局不适合单行省略 */
+
+    width: 1100px; /* 设置宽度 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 超出部分隐藏 */
+    text-overflow: ellipsis; /* 显示省略号 */
+}
+
+.travel-guide-item .touxiang {
+     width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    padding: 10px;
+    float: left;
+    display: flex;
+}
+.travel-guide-item .guide_img{
+    display: flex; /* 确保容器是flex容器 */
+    justify-content: flex-start; /* 图片整体靠左 */
+    margin-left: 80px;
+}
+.travel-guide-item img {
+     width: 160px;
+    height: 120px;
+}
+.travel-guide-item span{
+    float: left;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 14px;
+
+}
+
+.xx span{
+    color: #999;
+    font-size:12px;
+}
+.my_zhuye{
+    font-size:18px;
+    position: absolute;
+    top: 170px;
+    right: 250px;
+    color: rgba(0,0,0,1);
+}
+.my_zhuye:hover{
+
+    color: rgba(0,0,0,0.7);
+}

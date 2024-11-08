@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <title>用户个人中心</title>
+    <link rel="stylesheet" href="../static/css/user_profile.css">
+    <script src="../static/js/user_profile.js"></script>
+</head>
+<body>
+    <h1 style="font-size: 60px">个人中心</h1>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li onclick="loadContent('personal-info')">我的信息</li>
+                <li onclick="loadContent('order-info')">我的旅游</li>
+                <li onclick="loadContent('ticket-info')">我的机票</li>
+                <li onclick="loadContent('hotel-info')">我的酒店</li>
+                <li onclick="loadContent('vacation-info')">我的餐饮</li>
+                <li onclick="loadContent('strategy-info')">我的攻略</li>
+                <li onclick="loadContent('guide-info')">我的导游</li>  <!-- 新增导游信息 -->
+            </ul>
+        </div>
+        <div class="content">
+            <!-- 个人信息 -->
+            <div id="personal-info" class="content-section">
+                <h2>个人信息</h2>
+                <div class="personal-info">
+                    <img src="{{ user.avatar_url or '../static/image/user_avatar.png' }}" alt="用户头像">
+                    <span>{{ user.username }}</span>
+                    <span>手机：{{ user.phone_number }} <span class="action-button">修改</span></span>
+                </div>
+            </div>
+            <!-- 旅游订单 -->
+            <div id="order-info" class="content-section" style="display: none;">
+                <h2>我的旅游订单</h2>
+                 <table border="1" align="center">
+            <thead>
+                <tr>
+                    <th>旅游名称</th>
+                    <th>出发日期</th>
+                    <th>成人数</th>
+                    <th>儿童数</th>
+                    <th>联系人</th>
+                    <th>联系电话</th>
+                    <th>评价</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in tours_orders %}
+                <tr>
+                    <td>{{ order.tour.title }}</td>
+                    <td>{{ order.departure_date.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ order.adult_count }}</td>
+                    <td>{{ order.child_count }}</td>
+                    <td>{{ order.contact_name }}</td>
+                    <td>{{ order.contact_phone }}</td>
+                    <td>
+                        <!-- 评价表单 -->
+                        <form action="{{ url_for('submit_tour_review') }}" method="POST">
+                            <input type="hidden" name="tour_id" value="{{ order.tour_id }}">
+                            <input type="hidden" name="user_id" value="{{ user.user_id }}">
+                            <input type="text" name="rating" placeholder="请输入 1.0 到 5.0 的评分">
+                            <textarea name="content" placeholder="写下您的评价" required></textarea>
+                            <button type="submit">提交评价</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+            </div>
+            <!-- 机票信息 -->
+            <div id="ticket-info" class="content-section" style="display: none;">
+                <h2>我的机票</h2>
+                <table border="1" align="center">
+                    <thead>
+                        <tr>
+                            <th>航班名称</th>
+                            <th>出发城市</th>
+                            <th>到达城市</th>
+                            <th>航班日期</th>
+                            <th>出发时间</th>
+                            <th>到达时间</th>
+                            <th>机票价格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in user.orders %}
+                        <tr>
+                            <td>{{ order.flight.flight_name }}</td>
+                            <td>{{ order.flight.departure_city }}</td>
+                            <td>{{ order.flight.arrival_city }}</td>
+                            <td>{{ order.flight.flight_date }}</td>
+                            <td>{{ order.flight.departure_time }}</td>
+                            <td>{{ order.flight.arrival_time }}</td>
+                            <td>{{ order.order_amount }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- 酒店信息 -->
+            <div id="hotel-info" class="content-section" style="display: none;">
+                <h2>我的酒店</h2>
+                 <table border="1" align="center">
+            <thead>
+                <tr>
+                    <th>酒店名称</th>
+                    <th>房间类型</th>
+                    <th>入住日期</th>
+                    <th>退房日期</th>
+                    <th>联系人</th>
+                    <th>联系电话</th>
+                    <th>评价</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in hotel_orders %}
+                <tr>
+                    <td>{{ order.hotel.title }}</td>
+                    <td>{{ order.room.room_type }}</td>
+                    <td>{{ order.checkin_date.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ order.checkout_date.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ order.guest_name }}</td>
+                    <td>{{ order.guest_phone }}</td>
+                    <td>
+                        <!-- 评价表单 -->
+                        <form action="{{ url_for('submit_hotel_review') }}" method="POST">
+                            <input type="hidden" name="hotel_id" value="{{ order.hotel_id }}">
+                            <input type="hidden" name="user_id" value="{{ user.user_id }}">
+                            <input type="text" name="rating" placeholder="请输入 1.0 到 5.0 的评分">
+                            <textarea name="content" placeholder="写下您的评价" required></textarea>
+                            <button type="submit">提交评价</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+            </div>
+            <!-- 餐饮信息 -->
+            <div id="vacation-info" class="content-section" style="display: none;">
+                <h2>我的餐饮订单</h2>
+                 <table border="1" align="center">
+            <thead>
+                <tr>
+                    <th>餐厅名称</th>
+                    <th>预订日期</th>
+                    <th>预订时间</th>
+                    <th>人数</th>
+                    <th>餐位要求</th>
+                    <th>联系人</th>
+                    <th>联系电话</th>
+                    <th>备注</th>
+                    <th>评价</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in catering_orders %}
+                <tr>
+                    <td>{{ order.catering.title }}</td>
+                    <td>{{ order.reservation_date.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ order.reservation_time.strftime('%H:%M') }}</td>
+                    <td>{{ order.guest_count }}</td>
+                    <td>{{ order.table_condition }}</td>
+                    <td>{{ order.contact_name }}</td>
+                    <td>{{ order.contact_phone }}</td>
+                    <td>{{ order.remarks }}</td>
+                     <td>
+                        <!-- 评价表单 -->
+                        <form action="{{ url_for('submit_catering_review') }}" method="POST">
+                            <input type="hidden" name="catering_id" value="{{ order.catering_id }}">
+                            <input type="hidden" name="user_id" value="{{ user.user_id }}">
+                            <input type="text" name="rating" placeholder="请输入 1.0 到 5.0 的评分">
+                            <textarea name="content" placeholder="写下您的评价" required></textarea>
+                            <button type="submit">提交评价</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+            </div>
+            <!-- 攻略信息 -->
+            <div id="strategy-info" class="content-section" style="display: none;">
+                <h2>我的攻略</h2>
+                <table border="1" align="center">
+                        <thead>
+                            <tr>
+                                <th>标题</th>
+                                <th>创建时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for travel_guide in travel_guides %}
+                            <tr>
+                                <td>{{ travel_guide.title }}</td>
+                                <td>{{ travel_guide.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                </table>
+            </div>
+            <!-- 导游信息 -->
+            <div id="guide-info" class="content-section" style="display: none;">
+                <h2>我的导游</h2>
+                 <table border="1" align="center">
+                        <thead>
+                            <tr>
+                                <th>导游姓名</th>
+                                <th>导游城市</th>
+                                <th>服务开始时间</th>
+                                <th>服务结束时间</th>
+                                <th>成人数</th>
+                                <th>儿童数</th>
+                                <th>评价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for booking in guide_orders %}
+                            <tr>
+                                <td>{{ booking.guide.name }}</td>
+                                <td>{{ booking.guide.city }}</td>
+                                <td>{{ booking.service_start.strftime('%Y-%m-%d %H:%M') }}</td>
+                                <td>{{ booking.service_end.strftime('%Y-%m-%d %H:%M') }}</td>
+                                <td>{{ booking.adult_count }}</td>
+                                <td>{{ booking.child_count }}</td>
+                                <td>
+                                    <!-- 评价表单 -->
+                                    <form action="{{ url_for('submit_guide_review') }}" method="POST">
+                                        <input type="hidden" name="guide_id" value="{{ booking.guide_id }}">
+                                        <input type="hidden" name="user_id" value="{{ user.user_id }}">
+                                        <input type="text" name="rating" placeholder="请输入 1.0 到 5.0 的评分">
+                                        <textarea name="content" placeholder="写下您的评价" required></textarea>
+                                        <button type="submit">提交评价</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚盒子 -->
+    <div class="footer">
+        <div class="footer-wrap">
+            <div class="footer-link">
+                <!-- 页脚内容保持不变 -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

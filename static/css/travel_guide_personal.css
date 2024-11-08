@@ -1,0 +1,81 @@
+.personal-contanier{
+    width: 100%;
+}
+.personal-contanier-top{
+    width: 100%;
+    height: 273px;
+    background-image: url("../image/head_bg1.jpg");
+    display: flex;
+}
+.personal-contanier-top-left{
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    display: flex;
+}
+.personal-contanier-top-left img{
+    border-radius: 100%;
+
+}
+/*.personal-contanier-top-left .personal-username{*/
+/*    font-size: 30px;*/
+/*    color: #333;*/
+/*}*/
+/*.personal-contanier-top-left .personal-sign{*/
+/*    margin-top: 60px;*/
+/*    margin-left: -160px;*/
+/*}*/
+
+.personal-username{
+    color: #333;
+    font-size: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.personal-sign{
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;        /* 垂直排列用户名、签名和按钮 */
+}
+
+.add-gz{
+    width: 80px;
+    height: 28px;
+    color: #555;
+    background-color: rgb(255,255,255);
+    /*margin-top: 140px;*/
+    /*margin-left: -70px;*/
+    /*line-height: 0;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*text-align: center;*/
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.personal-contanier-top-right{
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    display: flex;
+}
+.personal-gz, .personal-fs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    color: #333333;
+}
+
+.personal-gz span , .personal-fs span{
+    color: rgb(0,127,246);
+    font-size: 30px;
+}
+.fgx{
+    border: solid 1px #999;
+    height: 45px;
+}

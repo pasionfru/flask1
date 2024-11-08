@@ -1,0 +1,127 @@
+/* 基础样式重置 */
+body, h2, h3, span, label, input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; /* 增加一个通用的字体大小 */
+}
+
+/* 容器样式 */
+.tour_booking_container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+.tour_booking_cxxx h2 {
+    color: #333;
+    font-size: 28px; /* 增加标题的字体大小 */
+    margin-bottom: 15px;
+}
+
+/* 日期和数量样式 */
+.tour_booking_cxxx span {
+    display: block;
+    color: #666;
+    font-size: 18px; /* 增加字体大小 */
+    margin-bottom: 5px;
+}
+
+/* 隐藏字段样式 */
+.tour_booking_cxxx input[type="hidden"] {
+    display: none;
+}
+
+/* 联系人信息样式 */
+.tour_booking_cxxx h3 {
+    color: #333;
+    font-size: 24px; /* 增加字体大小 */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* 横向表单样式 */
+.horizontal-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.horizontal-form label {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 18px; /* 增加字体大小 */
+}
+
+.horizontal-form label:last-child {
+    margin-right: 0;
+}
+
+.horizontal-form input[type="text"] {
+    width: 100%;
+    padding: 10px; /* 增加内边距以适应更大的字体 */
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px; /* 增加字体大小 */
+}
+
+/* 游客信息样式 */
+.tour-booking-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.tour-booking-item h3 {
+    font-size: 22px; /* 增加字体大小 */
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.tour-booking-item label {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 18px; /* 增加字体大小 */
+}
+
+.tour-booking-item label:last-child {
+    margin-right: 0;
+}
+
+.tour-booking-item input[type="text"] {
+    width: 100%;
+    padding: 10px; /* 增加内边距以适应更大的字体 */
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px; /* 增加字体大小 */
+}
+
+/* 提交按钮样式 */
+.tijiaodingdan {
+    display: block;
+    width: 100%;
+    padding: 12px; /* 增加内边距以适应更大的字体 */
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-size: 22px; /* 增加字体大小 */
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 70px;
+}
+
+.tijiaodingdan:hover {
+    background-color: #0056b3;
+}

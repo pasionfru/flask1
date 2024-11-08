@@ -1,0 +1,13 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, button, p, blockquote, th, td
+{margin: 0;padding: 0;}
+/*这一行将所有列出的HTML元素的默认外边距（margin）和内边距（padding）都设置为0。这是为了确保所有浏览器在渲染时使用一致的默认样式，通常用于重置默认的浏览器样式。 */
+body {
+    text-align: center;
+    font-family: Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;}
+/*text-align: center;：将body内的文本内容水平居中。*/
+/*font-family:定义网页的默认字体，按照优先顺序依次是Helvetica Neue、Helvetica、Arial、Microsoft Yahei等，这样可以确保网页在不同系统和浏览器中使用尽可能相似的字体。*/
+
+li{ list-style: none;}
+
+a{text-decoration: none;}
+img{border: none;}

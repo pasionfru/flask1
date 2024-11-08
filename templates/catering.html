@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/plane_ticket.css">
+    <link rel="stylesheet" href="../static/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/css/plane_search_result.css">
+    <link rel="stylesheet" href="../static/css/hotel.css">
+    <link rel="stylesheet" href="../static/css/travel_guide.css">
+    <link rel="stylesheet" href="../static/css/travel_guide_show.css">
+    <link rel="stylesheet" href="../static/css/travel_guide_personal.css">
+    <link rel="stylesheet" href="../static/css/catering.css">
+    <script src="../static/js/plane_ticket.js"></script>
+    <script src="../static/js/hotel.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="logo">
+                <a href="/">
+                <img src="../static/image/logo.png" alt="">
+<!--                <span class="logo-name">小鼻嘎旅游</span>-->
+<!--                <span class="logo-site">www.xbgtour.com</span>-->
+            </a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="重庆">
+                <button class="iconfont">&#xe63d;</button>
+            </div>
+            <div class="header-nav">
+               <ul>
+                    {% if 'user_id' in session %}
+                    <li class="logi-selected"><a href="/user/{{ session['user_id'] }}"><i class="iconfont">&#xe65d;</i>{{ session['username'] }}</a></li>
+                    <li class="logi-selected"><a href="/logout"><i class="iconfont">&#xe60c;</i>退出</a></li>
+                    {% else %}
+                    <li class="logi-selected"><a href="/login"><i class="iconfont">&#xe65d;</i>登录</a></li>
+                    <li class="logi-selected"><a href="/register"><i class="iconfont">&#xe65c;</i>注册</a></li>
+                    {% endif %}
+                    <li><i class="iconfont">&#xe605;</i>在线客服</li>
+                    <li><i class="iconfont">&#xe525;</i>400-820-6222</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 顶部结束-->
+
+    <!-- 菜单盒开始-->
+    <div class="menu-nav">
+        <div class="wrap">
+            <div class="main">
+                <ul>
+                    <li class="selected"><a href="/">热门目的地</a></li>
+                    <li class="jipiao_selected"><a href="/plane_ticket">机票</a></li>
+                    <li class="jiudian_selected"><a href="/hotel">酒店</a></li>
+                    <li><a href="/tour">跟团游</a></li>
+                    <li class="catering-selected"><a href="/catering">餐饮</a></li>
+                    <li class="gl_selected"><a href="/travel_guide">攻略</a></li>
+                    <li><a href="/daoyou">找导游</a></li>
+                </ul>
+            </div>
+<!--            <div class="login">-->
+<!--                <ul>-->
+<!--                    <li><a href="/logo">登录</a></li>-->
+<!--                    <li><a href="/register">注册</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+        </div>
+    </div>
+    <!-- 菜单盒结束-->
+
+    <!--餐饮盒子开始-->
+    <div class="restaurant-container">
+      <!--      餐厅列表-->
+        {% for catering in caterings %}
+        <div class="restaurant-item">
+            <img src="{{catering.catering_img}}" alt="餐厅图片" class="restaurant-image">
+            <div class="restaurant-details">
+                <h3 class="restaurant-name">{{catering.title}}</h3>
+                <div class="restaurant-info">
+                    <span>评分{{catering.rating}}</span>
+                </div>
+                <p class="restaurant-address">地址: {{catering.address}}</p>
+                <p class="restaurant-tags">标签: {{catering.tags}}</p>
+            </div>
+            <a href="/catering_show/{{catering.catering_id}}"><button class="book-now">立即预订</button></a>
+        </div>
+        {% endfor %}
+    </div>
+    <!--餐饮盒子结束-->
+
+
+    <!-- 页脚盒子开始-->
+    <div class="footer">
+        <div class="footer-wrap">
+            <div class="footer-link">
+                <p class="copyright">
+                    <span>Copyright ©2024 XBGTOUR.com</span>
+                    <a>京公网安备11010802030542</a>
+                    <a>京ICP备05021087号</a>
+                    <a>京ICP证060856号</a>
+                    <a>营业执照信息</a>
+                    <a>互联网药品信息服务资格证：(京)-非经营性-2016-0110</a>
+                    <a>举报、投诉邮箱: tousu@qunar.com</a>
+                    <a>全国旅游投诉热线: 12345</a>
+                </p>
+                <p class="copyright">
+                    <span>未成年人/违法和不良信息/算法推荐举报电话：010-59606977</span>
+                    <span>未成年人/违法和不良信息/算法推荐举报邮箱：tousu@qunar.com</span>
+                </p>
+                <ul>
+                    <li>
+                        <img src="https://s.qunarzz.com/f_cms/2022/1642594269680_633725513.png" width="66px" height="30px">
+                    </li>
+                    <li>
+                        <img src="https://s.qunarzz.com/hf/approve/globalsign.gif" width="66px" height="30px">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚盒子结束-->
+</body>
+</html>

@@ -1,0 +1,114 @@
+.daoyou-detail-container{
+    background: rgba(248,248,248,1);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.daoyou-detail-box{
+    background: rgba(255,255,255,1);
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+}
+.daoyou-detail-box-top{
+    display: flex;
+    width: 100%;
+    height: 248px;
+    background: rgba(255,255,255,1);
+    align-items: flex-start;
+    flex-direction: column;
+}
+.jjy-info{
+    padding: 20px;
+    font-weight: bold;
+
+}
+.jjy-name{
+    margin-left: 30px;
+    font-size: 14px;
+    color: #0064ba;
+    font-weight: bold;
+}
+.jjy-sj{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.jjy-sj input{
+    width: 160px;
+    height: 37px;
+    margin-left: 10px;
+}
+.jjy-sj i{
+    color: red;
+}
+.jjy-fy {
+    margin-top: 20px;
+    margin-left: 35px;
+}
+.fy{
+    color: red;
+}
+.jjy-rs {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.jjy-rs input{
+    width: 120px;
+    height: 37px;
+    margin-left: 10px;
+}
+.jjy-rs i{
+    color: red;
+}
+.daoyou-detail-box-top{
+    border-bottom: 1px dashed rgb(214, 211, 211);
+}
+
+.daoyou-detail-box-down{
+    display: flex;
+    width: 100%;
+    background: rgba(255,255,255,1);
+    align-items: flex-start;
+    flex-direction: column;
+}
+.liuyan{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.liuyan-input{
+    /*margin-top: 20px;*/
+    margin-left: 30px;
+}
+.liuyan-input textarea{
+    width: 600px;
+    height: 127px;
+}
+.jjy-submit_button{
+    margin-top: 10px;
+    border-top: 1px dashed rgb(214, 211, 211);
+}
+.jjy-submit_button button{
+    width: 185px;
+    height: 45px;
+    background: #da251c;;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.daoyou-pj{
+    background: rgba(255,255,255,1);
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.pj-item p{
+    margin: 5px;
+    float: left;
+}

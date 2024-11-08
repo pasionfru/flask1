@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>海罗千注册页面</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <style>
+        /* 页面整体样式 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ee9900, #ffcc33);
+        }
+
+        /* 注册容器样式 */
+        .register-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+
+        /* 标题样式 */
+        .register-container h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* 图片样式 */
+        .register-container img {
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 3px solid #ee9900;
+        }
+
+        /* 表单标签样式 */
+        form label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        /* 输入框样式 */
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="email"],
+        form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* 按钮样式 */
+        button {
+            font-size: 20px;
+            font-weight: bold;
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            background-color: #ee9900;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffae42;
+        }
+
+        /* 消息输出样式 */
+        .messages {
+            margin-top: 15px;
+            color: red;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 400px) {
+            .register-container {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .register-container h2 {
+                font-size: 28px;
+            }
+
+            button {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>注册页面</h2>
+<!--        <img src="../static/image/register.png" alt="注册图标" width="100" height="100">-->
+        <form action="/register" method="POST">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">邮箱:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone_number">手机号码:</label>
+            <input type="tel" id="phone_number" name="phone_number" required>
+
+            <button type="submit">注册</button>
+
+            <!-- 输出响应信息 -->
+            <div class="messages">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                {% endwith %}
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+.caterting-show-container{
+    width: 100%;
+    height: auto;
+    background: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center; /* 添加这一行实现水平居中 */
+    align-items: center; /* 添加这一行实现垂直居中，如果需要的话 */
+    flex-direction: column;
+}
+.caterting-show-container .caterting-show-container-top{
+    display: flex;
+    width: 950px;
+    height: 385px;
+    background: #fff;
+}
+.caterting-show-container-top-left{
+    width: 50%;
+    height: 385px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caterting-show-container-top-left img{
+    width: 410px;
+    height: 220px;
+}
+.caterting-show-container-top-right{
+    width: 50%;
+    height: 385px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.caterting-show-container-top-right span{
+    padding: 15px;
+}
+.caterting-show-container-top-right button{
+    width: 86px;
+    height: 35px;
+    background:#ff3937;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+.caterting-show-container-bottom{
+    /*justify-content: center;*/
+    /*align-items: flex-start;*/
+    /*flex-direction: column;*/
+    margin-top: 10px;
+    width: 950px;
+    height: 600px;
+    background: #fff;
+}
+.caterting-show-container-bottom-reviews h3{
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid rgb(225, 221, 221);
+}
+
+
+
+.caterting-show-container-bottom-reviews .review-item{
+    display: flex;
+}
+.caterting-show-container-bottom-reviews .review-item img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+.person-info {
+    flex: 1;
+    border-bottom: 1px solid rgb(225, 221, 221);
+}
+.person-info img{
+    float: left;
+
+}
+.person-info label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.caterting-review-date{
+    float: right;
+    color: #999;
+}
+.caterting-review-rating{
+    padding: 5px;
+}
+.caterting-review-review{
+    padding: 5px;
+}
+.username2{
+    padding: 5px;
+}

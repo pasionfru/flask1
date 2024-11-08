@@ -1,0 +1,272 @@
+
+/*顶部模块开始*/
+.header{
+    width: 100%;
+    height:90px;
+}
+.wrap{
+    width: 100%;
+    height:45px;
+    position: relative;
+}
+.logo{
+    width: 285px;
+    height: 90px;
+    line-height: 90px;
+    margin-left: 380px;
+    position: absolute;
+}
+.logo img{
+    width: 230px;
+    height: 230px;
+    float: left;
+    position: relative;
+    top: -65px;
+}
+/*.logo-name{*/
+/*    display: block;*/
+/*}*/
+/*.logo-name{*/
+/*    display: block;*/
+/*}*/
+.logo span{
+    font-weight: bold;
+    font-size:22px;
+    margin-top: 10px;
+    margin-left:10px;
+    width: 150px;
+    height: 33px;
+    line-height: 33px;
+    /*position: absolute;*/
+    float: left;
+    color: rgba(249,205,173,1);
+}
+.search-box{
+    width: 419px;
+    height: 40px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 665px;
+    position: absolute;
+}
+.search-box input{
+    width: 365px;
+    height:40px;
+    border: 2px solid rgba(0,127,246,1);
+    margin-top: 10px;
+    outline: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-right: 0;
+}
+.search-box button{
+    width: 52px;
+    height: 40px;
+    color: black;
+    background: #fff;
+    border:2px solid rgba(0,127,246,1);
+    float: right;
+    margin-top: 10px;
+}
+.header-nav ul{
+    float: left;
+    width: 700px;
+    margin-left: 1109px;
+    margin-top: 60px;
+}
+.header-nav ul li{
+    width: 120px;
+    /*margin-left: 1160px;*/
+    /*margin-top:15px;*/
+    padding: 0 0 0 10px;
+    border-right: 2px solid #eee;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+}
+.header-nav ul li:nth-child(2){
+    border-right: 0;
+}
+.header-nav ul li a{
+    color: #333333;
+    padding: 15px;
+}
+/*顶部模块结束*/
+
+/*菜单盒开始*/
+.menu-nav{
+    width: 100%;
+    height: 45px;
+    background: rgba(0,127,246, 1);
+}
+.menu-nav li{
+    margin-right: 10px;
+    padding: 10px;
+    width: 90px;
+}
+.menu-nav li:hover{
+    border-bottom: 2px solid #fffdef;
+}
+
+
+.main ul{
+    float: left;
+    width: 60%;
+    margin-left: 380px;
+    height: 45px;
+}
+.main ul li{
+    font-size:18px;
+    float: left;
+    padding: 2px;
+    margin-top: 8px;
+}
+
+.main ul li a{
+    color:#fffdef;
+    font-weight: bold;
+}
+.main .selected{
+    padding: 4px;
+    margin-top: 8px;
+    margin-left: 64px;
+    border-bottom: 2px solid #fffdef;
+}
+
+
+.main .shouye{
+    margin-left: 65px;
+}
+
+.login ul{
+    float: right;
+    width: 200px;
+    height: 45px;
+    margin-left: 300px;
+}
+.login ul li{
+    font-size:14px;
+    float: left;
+    height: 45px;
+    line-height: 45px;
+}
+.login ul li a{
+    color:#333333 ;
+}
+.banner{
+    width: 100%;
+    height: 380px;
+}
+.banner-img{
+    width: 100%;
+}
+.banner>.wrap{
+}
+.slide{
+    width: 15%;
+    height: auto;
+    padding: 20px 0;
+    background: rgba(38,48,64,0.8);
+    margin-left: 379px;
+    position: absolute;
+    top: 0;
+}
+/*菜单盒结束*/
+
+/*BANNER开始*/
+.slide h3{
+    font-weight: bold;
+    color:#fff;
+}
+.slide a{
+    font-weight: lighter;
+    color:#fff;
+}
+/*BANNER结束*/
+
+/*自由行盒子开始*/
+.freewalk-box{
+    width: 100%;
+}
+.freewalk-box h2{
+    float: left;
+    margin-left: 380px;
+}
+.freewalk-box li{
+    float: left;
+    margin-left: 10px;
+    padding: 10px;
+}
+.freewalk-box li a{
+    color: #1b1b1b;
+}
+
+/*自由行盒子结束*/
+
+/*旅游展示盒子开始*/
+
+.show{
+
+    width: 800px;
+    height: 300px;
+    margin-left: 260px;
+
+}
+
+.show ul{
+    width: 230px;
+    height: 200px;
+    float: left;
+    padding: 30px;
+    transition: all 0.2s linear;
+}
+.show ul:hover{
+    transform: translate3d(0,-2px,0);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.show img{
+    width: 230px;
+    height: 160px;
+
+}
+.show li{
+    padding: 1px;
+    text-overflow:ellipsis;/*设置隐藏部分为省略号*/
+    overflow: hidden;/*设置隐藏*/
+    display: -webkit-box;
+    -webkit-line-clamp: 2;/*设置显示行数，此处为2行，可设置其他数字*/
+    -webkit-box-orient: vertical;
+}
+.show li a{
+    color: #333333;
+
+}
+
+
+/*旅游展示盒子结束*/
+
+/*页脚部分开始*/
+.footer{
+    width: 100%;
+    float: left;
+}
+.footer-link ul{
+    display: flex;        /* 设置为Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    list-style: none;     /* 移除默认的列表符号 */
+    padding: 0;           /* 移除默认的内边距 */
+}
+
+.footer-link li{
+    /*display: block;*/
+    width: 104px;
+    height: 40px;
+    float: left;
+}
+
+.copyright{
+    font-size: 12px;
+    color: #4f4f4f;
+}
+
+/*页脚部分结束*/

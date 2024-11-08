@@ -1,0 +1,67 @@
+.catering-booking-container{
+    background: rgba(245,245,245,1);
+    width: 100%;
+    height: auto;
+     display: flex;
+    justify-content: center; /* 添加这一行实现水平居中 */
+    align-items: center; /* 添加这一行实现垂直居中，如果需要的话 */
+    flex-direction: column;
+}
+.catering-booking-container-top{
+    background: rgba(255,255,255,1);
+    width: 60%;
+    height: 417px;
+    text-align: left;
+}
+.catering-booking-container-top h3{
+    margin-left: 30px;
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid #9C1A1C;
+}
+.catering-booking-container-top label{
+    padding: 10px;
+    margin-left: 80px;
+}
+.catering-booking-container-top label input{
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    cursor: pointer;
+    height: 30px;
+}
+.catering-booking-container-bottom{
+    margin-top: 15px;
+    width: 60%;
+    height: 107px;
+    background: rgba(255,255,255,1);
+}
+.catering-booking-container-top select{
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    cursor: pointer;
+    height: 30px;
+}
+.catering-booking-container-top .bz{
+    width: 410px;
+    height: 41px;
+    background: #f1f8fe;
+    color: #487dd4;
+    border: 1px solid #c5edfe;
+}
+.catering-booking-container-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.catering-booking-container-bottom span{
+    padding-bottom: 10px;
+}
+.catering-booking-container-bottom button{
+    width: 250px;
+    height: 36px;
+    background: #ff3838;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}

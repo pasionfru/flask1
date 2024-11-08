@@ -1,0 +1,462 @@
+.hotel-detail-container{
+    width:100%;
+    height:800px;
+    /*background-image: url("../image/fjt.jpeg");*/
+    position:relative;
+    display: flex; /* 添加Flexbox布局 */
+}
+
+
+
+
+.bg-img{
+    filter: blur(5px);
+    width:100%;
+    height:800px;
+    padding-top: 1px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-clip: content-box;
+    overflow: hidden;
+    position: absolute;
+
+}
+.top-box{
+    width:75%;
+    margin-left:15%;
+    height:380px;
+    background-color: rgba(255, 255, 255, 0.8);;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top:10px;
+}
+.content-hotel{
+    width: 100%;
+}
+
+.top-left-box{
+    width:50%;
+}
+
+.top-left-box h1{
+    width: 400px;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.top-left-box .main_img{
+    width: 379px;
+    height: 278px;
+    padding-top: 15px;
+    margin-left: 15px;
+    display: block;
+
+}
+
+.vice-img-box{
+    width: 250px;
+    height: 278px;
+    padding: 10px;
+    left: 400px;
+    top: 85px;
+    position: absolute;
+}
+
+.vice-img-box img:hover{
+     transition: transform 0.3s ease; /* 添加过渡效果 */
+     transform: scale(1.6)
+}
+
+.vice-img-box img{
+    width: 120px;
+    height: 85px;
+}
+
+.top-left-box span{
+    display: block;
+    width: 50%;
+
+    white-space: nowrap; /* 防止文本自动换行 */
+    overflow: hidden; /* 隐藏超出部分的文本 */
+    text-overflow: ellipsis; /* 当文本溢出时显示省略号 */
+
+    text-align: left;
+    padding-left: 18px;
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+.bottom-box{
+    width:75%;
+    margin-left:15%;
+    height:395px;
+    background-color: rgba(255, 255, 255, 0.8);;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top:50%;
+}
+
+
+
+
+.top-left-box-content{
+    float: left;
+}
+
+.top-right-box{
+    width: 250px;
+    height: 278px;
+    padding: 10px;
+    left: 680px;
+    top: 85px;
+    position: absolute;
+
+}
+.show_all_reviews{
+    font-size: 14px;
+    color: #287dfa;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.show_all_reviews:hover{
+    color:#003366;
+}
+
+.look_map{
+    font-size: 14px;
+    color: #287dfa;
+    cursor: pointer;
+    font-weight: 700;
+    margin:0;
+    padding:0;
+    text-align: right;
+}
+.rating_2{
+    display: block;
+    width: 63px;
+    height: 30px;
+    background-color: rgb(73, 120, 206);
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    line-height: 30px;
+    font-size: 21px;
+
+}
+.rating_2_fen{
+    font-style: normal;
+    width: 20px;
+    height: 30px;
+    opacity: .6;
+    padding-left: 3px;
+    font-size: 18px;
+
+}
+
+.tabs {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 10px;
+}
+
+.tab-link {
+      padding: 10px 20px;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+}
+
+.tab-link.active {
+      border-bottom: 3px solid #007bff;
+      color: #007bff;
+}
+
+.tab-content {
+      display: none;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.0);;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+.tab-content::-webkit-scrollbar{
+      display: none;
+    }
+
+.tab-content.active {
+      display: block;
+    }
+
+
+
+
+.hotel-rooms {
+    margin-top: -15px;
+}
+.hotel-rooms h3{
+    text-align: left;
+    padding: 10px;
+}
+
+.room-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.room-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.room-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.room-info img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.room-price {
+    text-align: center;
+}
+
+.hotel-room-price{
+    float: left;
+    padding: 5px;
+    color: rgb(0,123,255);
+    font-weight: bold;
+    font-size: 24px;
+}
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.current-price {
+    font-size: 1.5em;
+    color: #e64a19;
+    font-weight: bold;
+}
+
+.book-now {
+    width: 84px;
+    height: 38px;
+    /*padding: 10px 20px;*/
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /*margin-top: 10px;*/
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.book-now:hover {
+    background-color: #0056b3;
+}
+.review-item{
+    width: 100%;
+    display: flex;
+    height: 100px;
+    position: relative;
+}
+
+.person-info{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+/*.person-info label,img{*/
+/*}*/
+
+.person-info img{
+    padding: 5px;
+}
+
+.person-info label{
+
+    color: #333;
+    padding: 4px 0 0 0;
+    margin: 0;
+}
+
+.person-review{
+    width: 100%;
+    height: 100px;
+    display: block;
+    border-bottom: 1px dashed #7f73b1;
+    border-radius: 4px;
+}
+.person-review p{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.review-rating{
+    color: #0072d1;;
+    text-align: left;
+    padding: 0;
+    font-weight: 700;
+    font-size: 28px;
+    display: block;
+    margin: 0;
+}
+
+.review-rating-2{
+    color: #aaa;
+    font-weight: 700;
+    padding: 0;
+    font-size: 18px;
+}
+.review-item img{
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+}
+.review-review{
+    padding: 0;
+    margin: 0;
+    color: #666;
+    white-space: pre-wrap;
+    text-align: left;
+
+}
+
+.NLP{
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #06aebd;
+    font-weight: 400;
+    white-space: nowrap;
+
+}
+
+.REVIEWS_NLP{
+    width: 250px;
+    height: 265px;
+    padding: 10px;
+    left: 950px;
+    top: 85px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+.REVIEWS_NLP h2{
+    color:#4f4f4f;
+    font-size: 18px;
+}
+.REVIEWS_NLP h2 img {
+    width: 23px;
+    height: 23px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.REVIEWS_NLP .good{
+    margin-top: 5px;
+    width: 250px;
+    height: 120px;
+    /*background-color: #06aebd;*/
+    background-color: rgba(6,174, 189, 0.5);
+    border-radius: 8px;
+    display: flex; /* 启用flex布局 */
+    flex-wrap: wrap; /* 允许子元素换行 */
+    justify-content: flex-start; /* 从主轴的开始位置排列子元素 */
+    align-items: flex-start; /* 在交叉轴的开始位置对齐子元素 */
+    overflow: hidden; /* 隐藏超出边界的内容 */
+}
+@keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(calc(-50% - 100px));
+    }
+}
+.REVIEWS_NLP .good p{
+    display: inline-block;
+    padding: 3px;
+    margin: 6px;
+    flex: 0 0 auto; /* 不允许p元素伸缩，保持其原始宽度 */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333333;
+    font-weight:normal;
+    border-radius: 8px;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
+    animation: scrollText 8s linear infinite;
+    white-space: nowrap; /* 防止文字换行 */
+}
+
+.REVIEWS_NLP .bad{
+    margin-top: 10px;
+    width: 250px;
+    height: 120px;
+    background-color: rgba(253, 104, 64, 0.3);
+    border-radius: 8px;
+    display: flex; /* 启用flex布局 */
+    flex-wrap: wrap; /* 允许子元素换行 */
+    justify-content: flex-start; /* 从主轴的开始位置排列子元素 */
+    align-items: flex-start; /* 在交叉轴的开始位置对齐子元素 */
+    overflow: hidden; /* 隐藏超出边界的内容 */
+}
+.REVIEWS_NLP .bad p{
+    padding: 3px;
+    margin: 6px;
+    flex: 0 0 auto; /* 不允许p元素伸缩，保持其原始宽度 */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333333;
+    font-weight:normal;
+    border-radius: 8px;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
+    animation: scrollText 8s linear infinite;
+    white-space: nowrap; /* 防止文字换行 */
+}
+.REVIEWS-TITLE{
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    left: 950px;
+    top: 30px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.REVIEWS-TITLE h2{
+    color:#4f4f4f;
+    font-size: 18px;
+}
+
+.REVIEWS-TITLE img{
+    width: 23px;
+    height: 23px;
+}

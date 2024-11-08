@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/admin.css">
+    <title>小鼻嘎-管理员管理后台</title>
+    <script src="../static/js/admin.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li onclick="loadContent('user-management')">用户管理</li>
+            <li onclick="loadContent('order-management')">订单管理</li>
+            <li onclick="loadContent('flight-management')">航班管理</li>
+            <li onclick="loadContent('ticket-management')">我的票务</li>
+            <li onclick="loadContent('city-management')">城市名称</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="user-management" class="content-section" style="display: none;">
+            <h1>用户管理</h1>
+            <p>此处为用户管理内容。</p>
+        </div>
+        <div id="order-management" class="content-section" style="display: none;">
+            <h1>订单管理</h1>
+            <p>此处为订单管理内容。</p>
+        </div>
+        <div id="flight-management" class="content-section">
+            <h1>航班管理</h1>
+            <a href="/admin/add" class="btn btn-details" style="margin-bottom: 20px;">添加新航班</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>航班名称</th>
+                        <th>出发城市</th>
+                        <th>到达城市</th>
+                        <th>航班日期</th>
+                        <th>出发时间</th>
+                        <th>到达时间</th>
+                        <th>机票价格</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for flight in flights %}
+                    <tr>
+                        <td>{{ flight.flight_name }}</td>
+                        <td>{{ flight.departure_city }}</td>
+                        <td>{{ flight.arrival_city }}</td>
+                        <td>{{ flight.flight_date }}</td>
+                        <td>{{ flight.departure_time }}</td>
+                        <td>{{ flight.arrival_time }}</td>
+                        <td>{{ flight.order_amount}}</td>
+                        <td>
+                            <div class="action-buttons">
+                                <a href="/admin/edit/{{ flight.id }}" class="btn btn-edit">编辑</a>
+                                <form action="/admin/delete/{{ flight.id }}" method="POST" style="display:inline;">
+                                    <button type="submit" class="btn btn-delete">删除</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div id="ticket-management" class="content-section" style="display: none;">
+            <h1>我的票务</h1>
+            <p>此处为票务管理内容。</p>
+        </div>
+        <div id="city-management" class="content-section" style="display: none;">
+            <h1>城市名称管理</h1>
+            <p>此处为城市名称管理内容。</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/*.selected2{*/
+/*    padding: 4px;*/
+/*    margin-top: 8px;*/
+/*    margin-left: 64px;*/
+/*}*/
+.catering-selected{
+    border-bottom: 2px solid #fffdef;
+}
+.gl_selected{
+    border-bottom: 0;
+}
+.restaurant-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+.restaurant-item {
+            display: flex;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+.restaurant-image {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+.restaurant-details {
+            flex: 1;
+            text-align: left;
+        }
+
+.restaurant-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+.restaurant-info {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+.restaurant-address {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+.restaurant-tags {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+.restaurant-review {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+.restaurant-cashback {
+            font-size: 14px;
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+
+.book-now {
+            width: 120px;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            align-self: center;
+        }
+
+.book-now:hover {
+            background-color: #c9302c;
+        }
