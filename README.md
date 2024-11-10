@@ -1,3 +1,5 @@
+这是一个简易的数据库期末作业
+
 **前端: HTML, CSS, JavaScript**
 **后端: Python（Flask）**
 **数据库:MySQL**
